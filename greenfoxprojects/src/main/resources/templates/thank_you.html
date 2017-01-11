@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html layout:decorator="layout" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<div layout:fragment="content">
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>Projects</h1>
+            <p>Early access of Greenfox Academy Zerda Raptor Projects with tech tags</p>
+        </div>
+        <div class="col-sm-4">
+            <ul class="list-group">
+                <li class="list-group-item" th:each="project : ${projects}" th:text="${project.projectName + ': ' + project.projectTag}"></li>
+            </ul>
+        </div><!-- /.col-sm-4 -->
+    </div>
+</div>
+</html>
